@@ -1,0 +1,547 @@
+﻿{
+  "events": {
+    "localized": "Ongoing - Each Player",
+    "globalized": "Ongoing - Global"
+  },
+
+  "actions": {
+    "wait": {
+      "args": {
+        "duration": {
+          "type": "float",
+          "index": 0,
+          "default": "0.016"
+        },
+        
+        "behavior": {
+          "type": "WaitBehav",
+          "index": 1,
+          "default": "Ignore Condition"
+        }
+      },
+      
+      "translation": "Wait",
+      "type": "void"
+    },
+    
+    "append": {
+      "type": "void",
+      "lhv-only": "define"
+    },
+
+    "remove": {
+      "type": "void",
+      "lhv-only": "define"
+    },
+
+    "removeAt": {
+      "type": "void",
+      "lhv-only": "define"
+    },
+
+    "createHud": {
+      "args": {
+        "visible": {
+          "type": ["Player", "array Player"],
+          "index": 0
+        },
+
+        "header": {
+          "type": ["string", "float", "null"],
+          "index": 1,
+          "default": "Null"
+        },
+
+        "subheader": {
+          "type": ["string", "floaat", "null"],
+          "index": 2,
+          "default": "Null"
+        },
+
+        "text": {
+          "type": ["string", "floaat", "null"],
+          "index": 3,
+          "default": "Null"
+        },
+
+        "location": {
+          "type": "HudLoc",
+          "index": 4
+        },
+
+        "sort": {
+          "type": "int",
+          "index": 5,
+          "default": "0"
+        },
+
+        "headerColor": {
+          "type": "Color",
+          "index": 6,
+          "default": "Color(White)"
+        },
+
+        "subColor": {
+          "type": "Color",
+          "index": 7,
+          "default": "Color(White)"
+        },
+
+        "textColor": {
+          "type": "Color",
+          "index": 8,
+          "default": "Color(White)"
+        },
+
+        "reeval": {
+          "type": "HudReeval",
+          "index": 9,
+          "default": "Visible To And String"
+        },
+
+        "spec": {
+          "type": "SpecVisibil",
+          "index": 10,
+          "default": "Default Visibility"
+        }
+      },
+
+      "translation": "Create Hud Text",
+      "type": "void"
+    },
+
+    "destroyHud": {
+      "args": {
+        "hud": {
+          "type": "Text",
+          "index": 0
+        }
+      },
+
+      "translation": "Destroy HUD Text",
+      "type": "void"
+    },
+
+    "createIWT": {
+      "args": {
+        "visible": {
+          "type": ["Player", "array Player"],
+          "index": 0
+        },
+
+        "header": {
+          "type": ["string", "float"],
+          "index": 1
+        },
+
+        "position": {
+          "type": ["Player", "Vector"],
+          "index": 2
+        },
+
+        "scale": {
+          "type": "float",
+          "index": 3,
+          "default": "1"
+        },
+        
+        "clip": {
+          "type": "Clip",
+          "index": 4,
+          "default": "Clip Against Surfaces"
+        },
+
+        "reeval": {
+          "type": "IWTReeval",
+          "index": 5,
+          "default": "Visible To Position And String"
+        },
+
+        "color": {
+          "type": "Color",
+          "index": 6,
+          "default": "Color(White)"
+        },
+
+        "spec": {
+          "type": "SpecVisibil",
+          "index": 7,
+          "default": "Default Visibility"
+        }
+      },
+
+      
+      "translation": "Create In-World Text",
+      "type": "void"
+    },
+    
+    "createEffect": {
+      "args": {
+        "player": {
+          "type": ["Player", "array Player"],
+          "index": 0
+        },
+        
+        "type": {
+          "type": "Effect",
+          "index": 1
+        },
+
+        "color": {
+          "type": "Color",
+          "index": 2
+        },
+
+        "position": {
+          "type": ["Player", "Vector"],
+          "index": 3
+        },
+
+        "radius": {
+          "type": "float",
+          "index": 4,
+          "default": "1"
+        },
+
+        "reeval": {
+          "type": "EffectReeval",
+          "index": 5,
+          "default": "Visible To Position And Radius"
+        }
+      },
+      
+      "translation": "Create Effect",
+      "type": "void"
+    }
+  },
+  
+  "values": {
+    "position": {
+      "args": {
+        "player": {
+          "type": "Player",
+          "index": 0
+        }
+      },
+
+      "translation": "Position Of",
+      "lhv-only": "player",
+      "type": "Vector"
+    },
+    
+    "count": {
+      "args": {
+        "array": {
+          "type": "array",
+          "index": 0
+        }
+      },
+
+      "translation": "Count Of",
+      "lhv-only": "array",
+      "type": "int"
+    },
+
+    "facingDir": {
+      "args": {
+        "player": {
+          "type": "Player",
+          "index": 0
+        }
+      },
+
+      "translation": "Facing Direction Of",
+      "lhv-only": "player",
+      "type": "Vector"
+    },
+
+    "dirTowards": {
+      "args": {
+        "vect1": {
+          "type": "Vector"
+        },
+
+        "vect2": {
+          "type": "Vector",
+          "index": 0
+        }
+      },
+
+      "translation": "Direction Towards",
+      "lhv-only": "vect1",
+      "type": "Vector"
+    },
+
+    "angleBetweenVects": {
+      "args": {
+        "vect1": {
+          "type": "Vector",
+          "index": 0
+        },
+
+        "vect2": {
+          "type": "Vector",
+          "index": 1
+        }
+      },
+
+      "translation": "Angle Between Vectors",
+      "type": "int"
+    },
+    
+    "once": {
+      "type": "define"
+    },
+
+    "sort": {
+      "type": "define"
+    },
+
+    "map": {
+      "type": "define"
+    },
+    
+    "indexOf": {
+      "type": "int",
+      "lhv-only": "define"
+    },
+
+    "eye": {
+      "args": {
+        "player": {
+          "type": "Player",
+          "index": 0
+        }
+      },
+
+      "translation": "Eye Position",
+      "lhv-only": "player",
+      "type": "Vector"
+    },
+    
+    
+    "isButtonHeld": {
+      "args": {
+        "button": {
+          "type": "Button",
+          "index": 0
+        },
+
+        "player": {
+          "type": "Player"
+        }
+      },
+
+      "translation": "Is Button Held",
+      "lhv-only": "player",
+      "type": "bool"
+    },
+    
+    "vect": {
+      "args": {
+        "x": {
+          "type": "float",
+          "index": 0
+        },
+        
+        "y": {
+          "type": "float",
+          "index": 1
+        },
+        
+        "z": {
+          "type": "float",
+          "index": 2
+        }
+      },
+
+      "translation": "Vector",
+      "type": "Vector"
+    },
+
+    "lastEntity": {
+      "translation": "Last Created Entity",
+      "type": "Entity"
+    },
+
+    "lastText": {
+      "translation": "Last Text ID",
+      "type": "Text"
+    },
+
+    "up": {
+      "translation": "Up",
+      "type": "Vector"
+    },
+    
+    "eventPlayer": {
+      "translation": "Event Player",
+      "type": "Player"
+    },
+
+    "hostPlayer": {
+      "translation": "Host Player",
+      "type": "Player"
+    }
+  },
+  
+  "enums": {
+    "WaitBehav":  {
+      "values": {
+        "Ignore": "Ignore Condition"
+      }
+    },
+    
+    "Button": {
+      "values": {
+        "Primary": "Primary Fire",
+        "Secondary": "Secondary Fire",
+        "Interact": "Interact"
+      },
+      
+      "translationType": "call",
+      "translation": "Button"
+    },
+    
+    "Color": {
+      "values": {
+        "White": "White",
+        "Yellow": "Yellow",
+        "Green": "Green",
+        "Purple": "Purple",
+        "Red": "Red",
+        "Blue": "Blue",
+        "Team1": "Team 1",
+        "Team2": "Team 2",
+        "Aqua": "Aqua",
+        "Orange": "Orange",
+        "Sky": "Sky Blue",
+        "Turquoise": "Turquoise",
+        "Lime": "Lime Green",
+        "Black": "Black",
+        "Rose": "Rose",
+        "Violet": "Violet",
+        "Gray": "Gray"
+      },
+
+      "translationType": "call",
+      "type": true,
+      "translation": "Color"
+    },
+    
+    "Effect": {
+      "values": {
+        "Sphere": "Sphere"
+      }
+    },
+
+    "EffectReeval": {
+      "values": {
+        "All": "Visible To Position Radius and Color",
+        "Color": "Color",
+        "None": "None"
+      }
+    },
+
+    "IWTReeval": {
+      "values": {
+        "VisiblePosition": "Visible To And Position",
+        "None": "None",
+        "Color": "Color"
+      }
+    },
+
+    "HudReeval": {
+      "values": {
+        "All": "Visible To Sort Order String and Color"
+      }
+    },
+
+    "HudLoc": {
+      "values": {
+        "Left": "Left",
+        "Top": "Top",
+        "Right": "Right"
+      }
+    },
+
+    "SpecVisibil": {
+      "values": {
+        "Default": "Default Visibility"
+      }
+    }
+  },
+  
+  "translations": {
+    "+": "Add",
+    "-": "Subtract",
+    "*": "Multiply",
+    "/": "Divide",
+    
+    "!": "Not",
+    "not": "Not",
+    "&&": "And",
+    "and": "And",
+    "||": "Or",
+    "or": "Or",
+    
+    "true": "True",
+    "false": "False",
+    
+    "global": "Global"
+  },
+  
+  "operations": {
+    "int": {
+      "+": {
+        "int": "int"
+      },
+      
+      "-": {
+        "int": "int"
+      },
+      
+      "*": {
+        "int": "int",
+        "Vector": "Vector"
+      },
+
+      "/": {
+        "int": "int",
+        "Vector": "Vector"
+      },
+      
+      ">": {
+        "int": "bool"
+      },
+      ">=": {
+        "int": "bool"
+      },
+
+      "<": {
+        "int": "bool"
+      },
+      "<=": {
+        "int": "bool"
+      }
+    },
+    
+    "Vector": {
+      "+": {
+        "Vector": "Vector"
+      },
+
+      "-": {
+        "Vector": "Vector"
+      },
+
+      "*": {
+        "int": "Vector"
+      },
+
+      "/": {
+        "int": "Vector"
+      }
+    }
+  }
+}
